@@ -1,0 +1,462 @@
+/* Variables CSS para temas */
+:root {
+  /* Paleta en Tonos de Rosa */
+  --primary-color: #5a3d52;   /* Rosa Oscuro / Malva */
+  --secondary-color: #e63946; /* Rosa Intenso / Rojo Coral */
+  --accent-color: #a8a3a0;    /* Gris Topo */
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-light: #fefcfd;
+  --bg-dark: #f0edee;
+  --border-color: #e0d9e4;
+  --skill-bg: rgba(255, 255, 255, 0.1);
+  --print-width: 100%;
+}
+
+[data-theme="dark"] {
+  --primary-color: #33222d;   /* Púrpura muy oscuro */
+  --secondary-color: #e63946; /* Rosa Intenso */
+  --accent-color: #a8a3a0;    /* Gris Topo */
+  --text-light: #fefcfd;
+  --text-dark: #ffffff;
+  --bg-light: #2c3e50;        /* Fondo principal */
+  --bg-dark: #1a252f;         /* Fondo secundario */
+  --border-color: #4a5f7a;
+  --skill-bg: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-dark);
+  transition: all 0.3s ease;
+}
+
+.cv-container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--bg-light);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Columna Izquierda */
+.left-column {
+  flex: 0 0 350px;
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-photo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--text-light);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.05);
+}
+
+.personal-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.personal-info h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.personal-info h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section h3 i {
+  color: var(--secondary-color);
+}
+
+/* Estilos para los enlaces */
+.contact-item a {
+    /* Color de enlace por defecto (para el tema claro) */
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Cambiar el color de los enlaces en el tema oscuro */
+[data-theme="dark"] .contact-item a {
+    color: var(--text-light); /* Usa un color claro definido en tu paleta */
+}
+
+/* Efecto hover */
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Habilidades */
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 8px;
+  background: var(--skill-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Idiomas */
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.level {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+/* Columna Derecha */
+.right-column {
+  flex: 1;
+  padding: 2rem;
+  background: var(--bg-light);
+}
+
+.right-column .section {
+  margin-bottom: 2.5rem;
+}
+
+.right-column .section h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.right-column p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  text-align: justify;
+}
+
+/* Experiencia */
+.experience-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.job-header h4 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.job-period {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.company {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.experience-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-item li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.experience-item li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Educación */
+.education-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.education-header h4 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.education-period {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.institution {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Proyectos */
+.project-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.project-item h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.project-tech {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Botones */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent-color);
+}
+
+.download-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    flex: none;
+    padding: 1.5rem;
+  }
+
+  .right-column {
+    padding: 1.5rem;
+  }
+
+  .job-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-period,
+  .education-period {
+    margin-top: 0.25rem;
+  }
+
+  .personal-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-column,
+  .right-column {
+    padding: 1rem;
+  }
+
+  .theme-toggle,
+  .download-btn {
+    position: relative;
+    margin: 1rem auto;
+    display: block;
+  }
+}
+
+/* Impresión */
+@media print {
+  .theme-toggle,
+  .download-btn {
+    display: none;
+  }
+
+  .cv-container {
+    box-shadow: none;
+    max-width: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .skill-progress {
+    width: var(--print-width) !important;
+  }
+}

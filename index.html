@@ -1,103 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum</title>
-    <style>
-        :root {
-          --color-principal: #DE8F5F;
-          --color-fondo: #fff8f3;
-          --color-texto: #333;
-          --color-secundario: #FFB38E;
-        }
-    
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: var(--color-fondo);
-          color: var(--color-texto);
-          margin: 0;
-          padding: 0;
-          line-height: 1.6;
-        }
-    
-        .container {
-          max-width: 800px;
-          margin: 50px auto;
-          background-color: #fff;
-          padding: 40px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          border-radius: 10px;
-        }
-    
-        h1 {
-          color: var(--color-principal);
-          font-size: 2.5em;
-          margin-bottom: 10px;
-          text-align: center;
-        }
-    
-        h2 {
-          color: var(--color-secundario);
-          border-bottom: 2px solid var(--color-principal);
-          padding-bottom: 5px;
-          margin-top: 30px;
-          text-align: center;
-        }
-    
-        p {
-          font-size: 1.1em;
-          margin-bottom: 20px;
-          text-align: center;
-        }
-    
-        ul {
-          list-style-type: disc;
-          margin-left: 20px;
-        }
-    
-        a {
-          color: var(--color-principal);
-          text-decoration: none;
-        }
-    
-        a:hover {
-          text-decoration: underline;
-        }
-    
-        .contacto li {
-          margin-bottom: 5px;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Dana</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Dana Pérez Moreno</h1>
-  <p>Actualmente estudiante de desarrollo de software. Me interesa el diseño web, la programación y trabajar en equipo para crear soluciones útiles.</p>
-  <p>Soy una persona empática, proactiva, con buenas habilidades de comunicación y trabajo en equipo.</p>
-  
-  <h2>Estudios</h2>
-  <ul>
-    <li>Secundario completo - IPEM N° 148 José María Paz</li>
-    <li>Estudiante de Desarrollo de Software - Instituto Superior Villa del Rosario</li>
-  </ul>
+  <div class="cv-container">
+    <!-- Columna Izquierda -->
+    <div class="left-column">
 
-  <h2>Experiencia Laboral</h2>
-  <ul>
-    <li>Atención al cliente - Cajera (2017 - 2024)</li>
-    <li>Pasantía en desarrollo web - (2024)</li>
-  </ul>
-  <h2>Habilidades</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Git y GitHub</li>
-    <li>SQL Server</li>
-  </ul>
 
-  <h2>Contacto</h2>
-  <ul>
-    <li>Email: dana.moreno99@hotmail.com</li>
-    <li>Teléfono: 3573-444449</li>
-    <li>GitHub: <a href="https://github.com/DanaM99" target="_blank">https://github.com/DanaM99</a></li>
-  </ul>
+      <!-- Información personal -->
+      <div class="personal-info">
+        <h1>Dana Pérez Moreno</h1>
+        <h2>Desarrolladora Web</h2>
+      </div>
+
+      <!-- Contacto -->
+      <div class="section">
+        <h3><i class="fas fa-address-book"></i> CONTACTO</h3>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="https://wa.me/543573444449" target="_blank">+54 9 3573 44-4449</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:dana.moreno99@hotmail.com">dana.moreno99@hotmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/dana-moreno/"
+            target="_blank">https://www.linkedin.com/in/dana-moreno/</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/DanaM99" target="_blank">github.com/DanaM99</a>
+        </div>
+      </div>
+
+      <!-- Habilidades -->
+      <div class="section">
+        <h3><i class="fas fa-cogs"></i> HABILIDADES</h3>
+        <div class="skill-item">
+          <span class="skill-name">HTML/CSS</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">SQL Server Management</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Node.js</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">PHP</span>
+        </div>
+      </div>
+
+      <!-- Idiomas -->
+      <div class="section">
+        <h3><i class="fas fa-language"></i> IDIOMAS</h3>
+        <div class="language-item">
+          <span>Español</span>
+          <span class="level">Nativo</span>
+        </div>
+        <div class="language-item">
+          <span>Inglés</span>
+          <span class="level">Intermedio</span>
+        </div>
+        <div class="language-item">
+          <span>Italiano</span>
+          <span class="level">Básico</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="right-column">
+      <!-- Acerca de mí -->
+      <div class="section">
+        <h3>ACERCA DE MÍ</h3>
+        <p>Desarrolladora web con experiencia en HTML, CSS, JavaScript, Node.js, PHP, .NET, SQL Server y MySQL.
+          Apasionada por crear interfaces modernas y funcionales, con enfoque en usabilidad y diseño responsive.
+          Comprometida con el aprendizaje continuo y la innovación tecnológica.</p>
+      </div>
+
+      <!-- Experiencia Laboral -->
+      <div class="section">
+        <h3>EXPERIENCIA LABORAL</h3>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <h4>Desarrolladora Front-End</h4>
+            <span class="job-period">May 2025 - Jun 2025</span>
+          </div>
+          <p class="company">Carpintería CH2V</p>
+          <ul>
+            <li>Desarrollo de plataforma web responsiva con JavaScript, HTML y CSS.</li>
+            <li>Catálogo en línea para exhibir muebles y trabajos de carpintería de forma visual y atractiva.</li>
+            <li>Integración de enlaces directos a redes sociales y WhatsApp para solicitar presupuestos.</li>
+            <li>Diseño enfocado en experiencia de usuario, navegación sencilla y contacto rápido.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-header">
+            <h4>Desarrolladora Full Stack</h4>
+            <span class="job-period">Jun 2025 - Actualidad</span>
+          </div>
+          <p class="company">SSDIGI</p>
+          <ul>
+            <li>Desarrollo de plataforma e-commerce responsiva con diseño enfocado en experiencia de usuario.</li>
+            <li>Creación y gestión de catálogo de productos personalizados utilizando Printful.</li>
+            <li>Integración con Shopify para publicación y gestión de la tienda en línea.</li>
+            <li>Despliegue y visualización de la plataforma final en Vercel.</li>
+          </ul>
+        </div>
+
+        <!-- Educación -->
+        <div class="section">
+          <h3>EDUCACIÓN</h3>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h4>Técnico Superior en Desarrollo de Software.</h4>
+              <span class="education-period">2023 - 2025</span>
+            </div>
+            <p class="institution">Instituto Superior Villa del Rosario</p>
+          </div>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h4>Curso Fullstack Python.</h4>
+              <span class="education-period">2024</span>
+            </div>
+            <p class="institution">Codo a Codo - Gobierno de Buenos Aires</p>
+          </div>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h4>Certificación Programación Inicial.</h4>
+              <span class="education-period">2023</span>
+            </div>
+            <p class="institution">Codo a Codo - Gobierno de Buenos Aires</p>
+          </div>
+
+          <div class="education-item">
+            <div class="education-header">
+              <h4>Curso Habilidades Blandas.</h4>
+              <span class="education-period">20223</span>
+            </div>
+            <p class="institution">Codo a Codo - Gobierno de Buenos Aires</p>
+          </div>
+        </div>
+
+        <!-- Proyectos -->
+        <div class="section">
+          <h3>PROYECTOS ACADÉMICOS</h3>
+
+          <div class="project-item">
+            <h4>Clicke</h4>
+            <p>Plataforma web para la promoción y reserva de salones de eventos. Permite a los dueños publicar
+              información, fotos, servicios y gestionar reservas mediante un calendario interactivo. Los usuarios pueden
+              explorar opciones, verificar disponibilidad y concretar reservas de manera sencilla, con experiencias
+              diferenciadas para dueños y clientes.</p>
+            <div class="project-tech">
+              <span class="tech-tag">SQL Server Management</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <h4>Estación Cheto</h4>
+            <p>Plataforma web para una rotisería que permite a los clientes reservar comidas de manera sencilla,
+              consultar menús disponibles y gestionar pedidos en línea. Incluye un panel de administración para la
+              gestión de productos, subproductos, categorías y control de reservas mediante CRUDs. El sistema cuenta con
+              roles diferenciados para clientes y administradores, ofreciendo una experiencia adaptada a cada tipo de
+              usuario.</p>
+            <div class="project-tech">
+              <span class="tech-tag">SQL Server Management</span>
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón de tema -->
+    <button class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Botón de descarga 
+    <button class="download-btn" id="download-btn">
+        <i class="fas fa-download"></i> Descargar CV
+    </button> -->
+
+    <script src="script.js"></script>
 </body>
+
 </html>
